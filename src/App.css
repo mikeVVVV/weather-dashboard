@@ -1,0 +1,279 @@
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 24px;
+  margin: 20px 0 0;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(90deg, #1f4e79, #2e6da4 55%, #3a86c8);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(31, 78, 121, 0.18);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  min-width: 250px;
+  max-width: 360px;
+  flex: 1;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfe0f0;
+  background: #fff;
+  color: #1f3350;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.search-bar input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.search-bar button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f4e79;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.search-bar button:hover:not(:disabled) {
+  background: #eef5fc;
+}
+
+.search-bar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dashboard {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(31, 78, 121, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: var(--heading);
+}
+
+.current-weather {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 28px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.current-location h2 {
+  margin: 0 0 2px;
+  font-size: 1.7rem;
+  color: var(--heading);
+}
+
+.country {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.current-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.current-icon {
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+.current-temp {
+  font-size: 3.8rem;
+  font-weight: 300;
+  color: #1a3350;
+  line-height: 1;
+}
+
+.current-label {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.current-updated {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.current-details {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 0 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.current-details div {
+  text-align: center;
+}
+
+.current-details dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.current-details dd {
+  margin: 4px 0 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a3350;
+}
+
+.hourly-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.hourly-table th {
+  padding: 8px 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid #dbe9f6;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.hourly-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #e8f1f9;
+  white-space: nowrap;
+}
+
+.hourly-table tbody tr:hover {
+  background: #f3f8fd;
+}
+
+.hourly-table .num {
+  text-align: right;
+}
+
+.hourly-table .center {
+  text-align: center;
+}
+
+.hourly-table-wrap {
+  overflow-x: auto;
+}
+
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.forecast-table th {
+  padding: 8px 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid #dbe9f6;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.forecast-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #e8f1f9;
+  white-space: nowrap;
+}
+
+.forecast-table tbody tr:hover {
+  background: #f3f8fd;
+}
+
+.forecast-table .center {
+  text-align: center;
+}
+
+.forecast-chart h2 {
+  margin-bottom: 10px;
+}
+
+.chart {
+  height: 260px;
+}
+
+.status {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.status-error p {
+  margin: 0 0 16px;
+  color: #b3261e;
+}
+
+.status-error button {
+  padding: 9px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.status-error button:hover {
+  background: var(--accent);
+  color: #fff;
+}
